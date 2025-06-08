@@ -8,7 +8,7 @@ const { chromium } = require('playwright');
   });
 
   const page = await browser.newPage();
-  const camUrl = process.env.ALARM_CAM_URL;
+  const camUrl = processvars.env.ALARM_CAM_URL;
 
   await page.goto(camUrl);
   await page.waitForTimeout(3600000); // 1 hour — keep alive for ffmpeg
